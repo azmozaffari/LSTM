@@ -164,10 +164,15 @@ def Test(dataloader,model):
     return test_loss/test_total, test_acc/test_total
 
 
+
+############# train the model   ########################
 model = Train(train_dataloader,val_dataloader)
+
+############# test the model   #########################
 test_loss,test_acc = Test(test_data_loader,model)
 
-print("test accuracy = test_acc)
+############ print the results  ########################
+print("test accuracy =", test_acc)
 
 
 
